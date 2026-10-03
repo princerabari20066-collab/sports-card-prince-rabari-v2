@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#070b14" />
+  <meta name="description" content="Official Portal of Prince Rabari - Deputy Logistics Head, Sports Committee 2026-27, Nirma University" />
+  <title>Prince Rabari | Sports Committee 2026–27 | Nirma University</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="manifest" href="manifest.json" />
+
+  <style>
+    :root {
+      --bg-dark: #070b14;
+      --bg-surface: #0f172a;
+      --bg-card: rgba(17, 24, 39, 0.75);
+      --border-card: rgba(255, 255, 255, 0.12);
+      --border-bright: rgba(249, 115, 22, 0.4);
+      --primary-orange: #f97316;
+      --primary-orange-glow: rgba(249, 115, 22, 0.3);
+      --primary-orange-dark: #ea580c;
+      --accent-cyan: #38bdf8;
+      --text-white: #ffffff;
+      --text-muted: #94a3b8;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --max-width: 1100px;
+      --transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(249, 115, 22, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(56, 189, 248, 0.1) 0px, transparent 50%),
+        radial-gradient(at 50% 50%, rgba(15, 23, 42, 0.98) 0px, transparent 100%);
+      background-attachment: fixed;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text-white);
+      line-height: 1.6;
+      padding: 0 16px;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    /* Top Navigation Bar */
+    .site-header {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-card);
+      margin-bottom: 40px;
+    }
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .committee-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .committee-logo {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-sm);
+      object-fit: cover;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-card);
+    }
+    .brand-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .brand-subtitle {
+      font-size: 12px;
+      color: var(--primary-orange);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .badge-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(249, 115, 22, 0.12);
+      border: 1px solid var(--primary-orange);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: 'Outfit', sans-serif;
+      color: #ffedd5;
+      text-transform: uppercase;
+    }
+    .pulse-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--primary-orange);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--primary-orange);
+    }
+
+    /* Hero Section (Left Achievements, Right Image) */
+    .hero-section {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 36px;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+    .hero-left {
+      background: var(--bg-card);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+    .hero-tagline {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary-orange);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .hero-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: 40px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 8px;
+      background: linear-gradient(120deg, #ffffff 40%, var(--accent-cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-role {
+      font-size: 16px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+    .section-label {
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-white);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-label::before {
+      content: '';
+      width: 4px;
+      height: 16px;
+      background: var(--primary-orange);
+      border-radius: 2px;
+    }
+    .achievement-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .achievement-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13.5px;
+      color: #cbd5e1;
+    }
+    .achievement-icon {
+      color: var(--primary-orange);
+      font-size: 16px;
+      line-height: 1;
+      margin-top: 3px;
+    }
+    .hero-right {
+      display: flex;
+      justify-content: center;
+    }
+    .profile-card {
+      position: relative;
+      width: 100%;
+      max-width: 340px;
+      aspect-ratio: 1 / 1.15;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 2px solid var(--border-bright);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 30px var(--primary-orange-glow);
+    }
+    .profile-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Interactive Movable Carousel Section */
+    .movable-section {
+      margin-bottom: 70px;
+    }
+    .carousel-wrapper {
+      position: relative;
+      background: var(--bg-card);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 32px 60px;
+      min-height: 290px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+    }
+    .carousel-container {
+      width: 100%;
+      overflow: hidden;
+    }
+    .carousel-slide {
+      display: none;
+      animation: fadeInSlide 0.35s ease forwards;
+    }
+    .carousel-slide.active {
+      display: block;
+    }
+    @keyframes fadeInSlide {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .slide-heading {
+      font-family: 'Outfit', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-white);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .slide-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-card);
+      color: var(--text-white);
+      font-size: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      z-index: 10;
+    }
+    .slide-nav-btn:hover {
+      background: var(--primary-orange);
+      border-color: var(--primary-orange);
+      box-shadow: 0 0 16px var(--primary-orange-glow);
+    }
+    .btn-prev { left: 12px; }
+    .btn-next { right: 12px; }
+
+    /* Slide 1: Contact Details Grid */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .contact-card-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      color: var(--text-white);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+    .contact-card-btn:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: var(--border-bright);
+      transform: translateY(-2px);
+    }
+    .contact-icon {
+      font-size: 18px;
+    }
+    .vcf-btn {
+      background: linear-gradient(135deg, var(--primary-orange), var(--primary-orange-dark));
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      border-radius: var(--radius-md);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 13.5px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 6px 18px var(--primary-orange-glow);
+      transition: var(--transition);
+    }
+    .vcf-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px var(--primary-orange-glow);
+    }
+
+    /* Slide 2: Personal Info */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .info-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+    }
+    .info-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--primary-orange);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .info-val {
+      font-size: 18px;
+      font-weight: 700;
+      color: #f1f5f9;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    /* Slide 3: Duties */
+    .duties-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .duty-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13.5px;
+      color: #cbd5e1;
+    }
+    .duty-check {
+      color: var(--primary-orange);
+      font-weight: 700;
+    }
+
+    /* Carousel Indicators */
+    .carousel-indicators {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 18px;
+    }
+    .indicator-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .indicator-dot.active {
+      width: 28px;
+      border-radius: 999px;
+      background: var(--primary-orange);
+    }
+
+    /* Full Width Scroll Sections */
+    .media-section {
+      margin-bottom: 70px;
+    }
+    .section-title-wrap {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .media-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    .media-subtitle {
+      font-size: 13.5px;
+      color: var(--text-muted);
+    }
+    .media-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    }
+    .full-image {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      display: block;
+    }
+    .campus-image {
+      width: 100%;
+      max-height: 440px;
+      object-fit: cover;
+      display: block;
+    }
+    .card-footer-caption {
+      padding: 16px 24px;
+      font-size: 13px;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-card);
+      background: rgba(15, 23, 42, 0.5);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Official Address Section */
+    .address-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      margin-bottom: 60px;
+    }
+    .address-header {
+      font-family: 'Outfit', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .address-text {
+      font-size: 15px;
+      color: #cbd5e1;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .map-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(249, 115, 22, 0.12);
+      border: 1px solid var(--primary-orange);
+      color: #ffedd5;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: var(--radius-md);
+      font-size: 13px;
+      font-weight: 700;
+      transition: var(--transition);
+    }
+    .map-btn:hover {
+      background: var(--primary-orange);
+      color: #ffffff;
+    }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid var(--border-card);
+      padding: 24px 0 40px 0;
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* Responsive */
+    @media (max-width: 860px) {
+      .hero-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .hero-right {
+        order: -1;
+      }
+      .profile-card {
+        max-width: 260px;
+      }
+      .carousel-wrapper {
+        padding: 30px 20px;
+      }
+      .slide-nav-btn {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header container">
+    <div class="header-content">
+      <div class="committee-brand">
+        <img class="committee-logo" src="logo.jpg" alt="Sports Committee Logo" />
+        <div>
+          <div class="brand-title">SPORTS COMMITTEE 2026–27</div>
+          <div class="brand-subtitle">NIRMA UNIVERSITY</div>
+        </div>
+      </div>
+      <div class="badge-status">
+        <span class="pulse-dot"></span>
+        OFFICIAL PORTAL
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- HERO SECTION: Left Achievements & Right Profile Image -->
+    <section class="hero-section">
+      <div class="hero-left">
+        <div class="hero-tagline">Official Portfolio</div>
+        <h1 class="hero-name">Prince Rabari</h1>
+        <p class="hero-role">Deputy Logistics Head • Sports Committee 2026–27, Nirma University[cite: 1]</p>
+
+        <div class="section-label">Key Achievements & Roles</div>
+        <ul class="achievement-list">
+          <li class="achievement-item">
+            <span class="achievement-icon">★</span>
+            <span>Appointed <strong>Deputy Logistics Head</strong> for the University Sports Committee tenure 2026–27[cite: 1].</span>
+          </li>
+          <li class="achievement-item">
+            <span class="achievement-icon">★</span>
+            <span>Directing inter-department university athletic tournament ground setups and equipment readiness[cite: 1].</span>
+          </li>
+          <li class="achievement-item">
+            <span class="achievement-icon">★</span>
+            <span>Managing referee kits, match transport coordination, and sports inventory procurement[cite: 1].</span>
+          </li>
+          <li class="achievement-item">
+            <span class="achievement-icon">★</span>
+            <span>Led field hydration points, first-aid safety logistics, and athlete support for university athletic meets[cite: 1].</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="hero-right">
+        <div class="profile-card">
+          <img class="profile-image" src="profile.jpg" alt="Prince Rabari" />
+        </div>
+      </div>
+    </section>
+
+    <!-- MOVABLE CAROUSEL: Contact Info, Personal Info, Logistics Role -->
+    <section class="movable-section">
+      <div class="carousel-wrapper">
+        <button class="slide-nav-btn btn-prev" onclick="moveSlide(-1)">&#10094;</button>
+
+        <div class="carousel-container">
+          
+          <!-- Slide 0: Contact Info -->
+          <div class="carousel-slide active" id="slide-0">
+            <div class="slide-heading">
+              <span>📞</span> Contact & Social Connect
+            </div>
+            <div class="contact-grid">
+              <a href="tel:+917984127426" class="contact-card-btn">
+                <span class="contact-icon">📞</span>
+                <span>Call: +91 79841 27426[cite: 1]</span>
+              </a>
+              <a href="https://wa.me/917984127426?text=Hi%20Prince,%20connecting%20regarding%20Sports%20Committee%202026-27" target="_blank" rel="noopener noreferrer" class="contact-card-btn">
+                <span class="contact-icon">💬</span>
+                <span>WhatsApp Message[cite: 1]</span>
+              </a>
+              <a href="https://www.instagram.com/prince_rabari__06" target="_blank" rel="noopener noreferrer" class="contact-card-btn">
+                <span class="contact-icon">📸</span>
+                <span>Instagram Profile[cite: 1]</span>
+              </a>
+              <a href="https://www.linkedin.com/in/prince-rabari-26891233b" target="_blank" rel="noopener noreferrer" class="contact-card-btn">
+                <span class="contact-icon">💼</span>
+                <span>LinkedIn Network[cite: 1]</span>
+              </a>
+              <a href="mailto:24bph072@nirmauni.ac.in" class="contact-card-btn">
+                <span class="contact-icon">🎓</span>
+                <span>24bph072@nirmauni.ac.in[cite: 1]</span>
+              </a>
+              <a href="mailto:princerabari20066@gmail.com" class="contact-card-btn">
+                <span class="contact-icon">✉️</span>
+                <span>Personal Email[cite: 1]</span>
+              </a>
+            </div>
+            <button class="vcf-btn" onclick="downloadVCard()">
+              <span>💾</span> Save Contact to Phone (.vcf)[cite: 1]
+            </button>
+          </div>
+
+          <!-- Slide 1: Personal Info -->
+          <div class="carousel-slide" id="slide-1">
+            <div class="slide-heading">
+              <span>👤</span> Personal Information
+            </div>
+            <div class="info-grid">
+              <div class="info-card">
+                <div class="info-title">Date of Birth</div>
+                <div class="info-val">08/07/2006</div>
+              </div>
+              <div class="info-card">
+                <div class="info-title">College ID</div>
+                <div class="info-val">24BPH072[cite: 1]</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: What Logistics Head Does -->
+          <div class="carousel-slide" id="slide-2">
+            <div class="slide-heading">
+              <span>⚙️</span> Role of Deputy Logistics Head
+            </div>
+            <ul class="duties-list">
+              <li class="duty-item">
+                <span class="duty-check">✔</span>
+                <span>Providing logistics materials, equipment dispatch, and sports gear availability during tournaments[cite: 1].</span>
+              </li>
+              <li class="duty-item">
+                <span class="duty-check">✔</span>
+                <span>Handling ground setup arrangements with the university sports complex staff and ground crew[cite: 1].</span>
+              </li>
+              <li class="duty-item">
+                <span class="duty-check">✔</span>
+                <span>Managing transport logistics for match officials, referees, and participating inter-college teams[cite: 1].</span>
+              </li>
+              <li class="duty-item">
+                <span class="duty-check">✔</span>
+                <span>Procuring medical emergency first-aid boxes, hydration supplies, and refreshments for athletics days[cite: 1].</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <button class="slide-nav-btn btn-next" onclick="moveSlide(1)">&#10095;</button>
+      </div>
+
+      <div class="carousel-indicators">
+        <span class="indicator-dot active" onclick="setSlide(0)"></span>
+        <span class="indicator-dot" onclick="setSlide(1)"></span>
+        <span class="indicator-dot" onclick="setSlide(2)"></span>
+      </div>
+    </section>
+
+    <!-- SCROLL DOWN 1: Sports Committee Group Photo -->
+    <section class="media-section">
+      <div class="section-title-wrap">
+        <h2 class="media-title">Sports Committee Squad 2026–27</h2>
+        <p class="media-subtitle">Official group photograph of the university sports committee organizers.</p>
+      </div>
+      <div class="media-card">
+        <img class="full-image" src="group.jpg" alt="Sports Committee Group Photo" />
+        <div class="card-footer-caption">
+          <span>🏆 Sports Committee 2026–27 Organizers</span>
+          <span>Nirma University</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCROLL DOWN 2: Nirma University Campus Image -->
+    <section class="media-section">
+      <div class="section-title-wrap">
+        <h2 class="media-title">Nirma University Campus</h2>
+        <p class="media-subtitle">Institute grounds, athletic facilities, and academic infrastructure.</p>
+      </div>
+      <div class="media-card">
+        <img class="campus-image" src="campus.jpg" alt="Nirma University Campus" />
+        <div class="card-footer-caption">
+          <span>🏛️️ Main Campus Grounds & Sports Complex</span>
+          <span>Ahmedabad, Gujarat</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL SECTION: Official University Address -->
+    <section class="address-section">
+      <div class="address-header">
+        <span>📍</span> Official University Address
+      </div>
+      <p class="address-text">
+        <strong>Institute of Pharmacy, Nirma University</strong><br />
+        Sarkhej-Gandhinagar Highway, Post: Chandlodia, Via: Gota,<br />
+        Ahmedabad - 382481, Gujarat, India.
+      </p>
+      <a 
+        class="map-btn" 
+        href="https://maps.google.com/?q=Nirma+University+Ahmedabad" 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        View on Google Maps →
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer container">
+    <p>© 2026–2027 Sports Committee • Nirma University • All Rights Reserved</p>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.indicator-dot');
+
+    function updateCarousel() {
+      slides.forEach((slide, idx) => {
+        slide.classList.toggle('active', idx === currentSlide);
+      });
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === currentSlide);
+      });
+    }
+
+    function moveSlide(direction) {
+      currentSlide = (currentSlide + direction + slides.length) % slides.length;
+      updateCarousel();
+    }
+
+    function setSlide(index) {
+      currentSlide = index;
+      updateCarousel();
+    }
+
+    function downloadVCard() {
+      const vcard = [
+        'BEGIN:VCARD',
+        'VERSION:3.0',
+        'N:;Prince Rabari;;;',
+        'FN:Prince Rabari',
+        'ORG:Nirma University;Sports Committee 2026-27',
+        'TITLE:Deputy Logistics Head',
+        'TEL;TYPE=CELL,VOICE:+917984127426',
+        'EMAIL;TYPE=WORK:24bph072@nirmauni.ac.in',
+        'EMAIL;TYPE=HOME:princerabari20066@gmail.com',
+        'URL:https://www.linkedin.com/in/prince-rabari-26891233b',
+        'NOTE:College ID: 24BPH072 - DOB: 08/07/2006 - Sports Committee 2026-27',
+        'END:VCARD'
+      ].join('\r\n');
+
+      const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8;' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.setAttribute('download', 'Prince_Rabari_Sports_ID.vcf');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // Register Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch((err) => {
+          console.log('SW registration error:', err);
+        });
+      });
+    }
+  </script>
+</body>
+</html>

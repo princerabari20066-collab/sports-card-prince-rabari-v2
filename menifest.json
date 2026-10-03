@@ -1,0 +1,25 @@
+{
+  "short_name": "Prince ID",
+  "name": "Prince Rabari - Sports Committee 2026-27",
+  "description": "Official portal of Prince Rabari, Deputy Logistics Head at Nirma University.",
+  "icons": [
+    {
+      "src": "profile.jpg",
+      "type": "image/jpeg",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "profile.jpg",
+      "type": "image/jpeg",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#070b14",
+  "theme_color": "#070b14",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "categories": ["sports", "education"]
+}
